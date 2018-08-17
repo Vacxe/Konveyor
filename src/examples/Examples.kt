@@ -1,7 +1,8 @@
 package examples
 
 import com.github.vacxe.konveyor.Konveyor
-import com.github.vacxe.konveyor.Konveyor.Companion.build
+import com.github.vacxe.konveyor.build
+
 
 fun main(args: Array<String>) {
 
@@ -9,7 +10,7 @@ fun main(args: Array<String>) {
          StringBuilder().append(123)
     }
 
-    val primitive = build(PrimitiveDataClass::class.java)
+    val primitive: PrimitiveDataClass = build()
     System.out.println(primitive.toString())
 
     val nested = build(NestedDataClass::class.java)
