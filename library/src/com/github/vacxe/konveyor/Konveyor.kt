@@ -9,9 +9,9 @@ class Konveyor{
     }
 }
 
-fun <T> build(clazz: Class<T>, constructorNumber: Int = 0, nestedLevel: Int = 0): T =
+fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int = 0, nestedLevel: Int = 0): T =
         Generator(Konveyor.customObjectResolver).build(clazz, constructorNumber, nestedLevel)
 
 
-inline fun <reified T : Any> build(nestedLevel: Int = 0): T = build(T::class.java, nestedLevel)
+inline fun <reified T : Any> randomBuild(nestedLevel: Int = 0): T = randomBuild(T::class.java, nestedLevel)
 

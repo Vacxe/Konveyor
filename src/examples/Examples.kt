@@ -1,7 +1,7 @@
 package examples
 
 import com.github.vacxe.konveyor.Konveyor
-import com.github.vacxe.konveyor.build
+import com.github.vacxe.konveyor.randomBuild
 
 
 fun main(args: Array<String>) {
@@ -10,9 +10,9 @@ fun main(args: Array<String>) {
          StringBuilder().append(123)
     }
 
-    val primitive: PrimitiveDataClass = build()
+    val primitive: PrimitiveDataClass = randomBuild()
     System.out.println(primitive.toString())
 
-    val nested = build(NestedDataClass::class.java)
+    val nested = randomBuild(NestedDataClass::class.java)
     System.out.println(nested.toString())
 }
