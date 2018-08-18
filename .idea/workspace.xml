@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3da03e6-c709-4767-86aa-f77ef8544e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/exceptions/KonveyorException.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/CustomParameters.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/RandomPrimitiveGenerator.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/CustomObjectResolver.kt" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/ObjectResolver.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/Generator.kt" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/Generator.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/Konveyor.kt" afterPath="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/base/Konveyor.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/Examples.kt" afterPath="$PROJECT_DIR$/src/examples/Examples.kt" />
-    </list>
+    <list default="true" id="d3da03e6-c709-4767-86aa-f77ef8544e40" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomPrimitiveGenerator.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RandomPrimitiveGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/RandomPrimitiveGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -51,6 +42,28 @@
               <folding>
                 <element signature="e#44#124#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +103,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrimitiveDataClass.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/PrimitiveDataClass.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -150,6 +153,7 @@
         <option value="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/CustomParameters.kt" />
         <option value="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/generate/ObjectResolver.kt" />
         <option value="$PROJECT_DIR$/library/src/com/github/vacxe/konveyor/base/Konveyor.kt" />
+        <option value="$PROJECT_DIR$/library/build.gradle" />
       </list>
     </option>
   </component>
@@ -191,38 +195,7 @@
               <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Konveyor" type="462c0819:PsiDirectoryNode" />
               <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="konveyor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="konveyor" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Konveyor" type="b2602c69:ProjectViewProjectNode" />
@@ -252,6 +225,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/library" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -273,7 +247,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.examples.ExamplesKt">
+  <component name="RunManager" selected="Gradle.Unnamed">
+    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/library" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -366,6 +355,10 @@
       <module name="Konveyor" />
       <envs />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Gradle.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Kotlin.examples.ExamplesKt" />
+    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Kotlin.examples.ExamplesKt" />
@@ -386,7 +379,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -580,6 +573,24 @@
           <folding>
             <element signature="e#44#124#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
