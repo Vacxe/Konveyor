@@ -5,7 +5,6 @@ import com.github.vacxe.konveyor.base.randomBuild
 
 
 fun main(args: Array<String>) {
-
     Konveyor.addCustomType(StringBuilder::class.java) {
          StringBuilder().append(123)
     }

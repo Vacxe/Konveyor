@@ -1,5 +1,4 @@
 apply plugin: 'kotlin'
-
 buildscript {
     ext.kotlin_version = '1.2.60'
     repositories {
@@ -16,10 +15,14 @@ allprojects {
         jcenter()
         google()
         maven { url "https://jitpack.io" }
+        mavenCentral()
     }
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
 }
