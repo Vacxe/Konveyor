@@ -1,7 +1,7 @@
 package examples
 
-import com.github.vacxe.konveyor.Konveyor
-import com.github.vacxe.konveyor.randomBuild
+import com.github.vacxe.konveyor.base.Konveyor
+import com.github.vacxe.konveyor.base.randomBuild
 
 
 fun main(args: Array<String>) {
