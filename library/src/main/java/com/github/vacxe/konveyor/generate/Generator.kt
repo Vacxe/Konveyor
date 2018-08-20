@@ -13,6 +13,10 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
             throw KonveyorException("Generation level out of possible nesting")
         }
 
+        if(clazz.isInterface){
+            //TODO: Mock
+        }
+
         val constructors = clazz.constructors
         if (constructors.isNotEmpty()) {
             val constructor = constructors[constructorNumber]
@@ -39,7 +43,13 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
                 else generateNestedClass(parameterType, nestedLevel + 1)
 
 
-    private fun generateNestedClass(clazz: Class<*>, nestedLevel: Int = 0): Any
-            = customObjectResolver.resolve(clazz) ?: build(clazz, nestedLevel = nestedLevel)
-
+    private fun generateNestedClass(clazz: Class<*>, nestedLevel: Int = 0): Any {
+        customObjectResolver.resolve(clazz)?.let { return it }
+        for(constructorNumber in 0..clazz.constructors.size){
+            try {
+                return build(clazz, constructorNumber, nestedLevel = nestedLevel)
+            }catch (e: KonveyorException){ }
+        }
+        throw KonveyorException("No possible to create constructor build tree")
+    }
 }

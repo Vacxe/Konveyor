@@ -6,8 +6,12 @@ class ObjectResolver {
     fun <C> addCustomType(clazz: Class<C>, lambda : () -> C) =
         customObjectResolverMap.put(clazz, lambda)
 
-    internal fun resolve(clazz: Class<*>) {
-        (customObjectResolverMap[clazz] as? () -> Any)?.invoke()
+    internal fun resolve(clazz: Class<*>) : Any?{
+        return if(customObjectResolverMap.containsKey(clazz)) {
+            (customObjectResolverMap[clazz] as? () -> Any)?.invoke()
+        }else{
+            null
+        }
     }
 
 

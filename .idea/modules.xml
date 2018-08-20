@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Konveyor.iml" filepath="$PROJECT_DIR$/Konveyor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Konveyor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Konveyor_main.iml" group="Konveyor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Konveyor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Konveyor_test.iml" group="Konveyor" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" group="library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library_main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library_main.iml" group="library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library_test.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library_test.iml" group="library" />
     </modules>
   </component>
 </project>
