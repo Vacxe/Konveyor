@@ -3,7 +3,7 @@ package konveyor.generate
 import konveyor.exceptions.KonveyorException
 import java.util.*
 
-internal class RandomPrimitiveGenerator {
+internal class PrimitiveGenerator {
     private val random = Random()
 
     private val primitiveSet = setOf(Byte::class.java, Short::class.java, Int::class.java,

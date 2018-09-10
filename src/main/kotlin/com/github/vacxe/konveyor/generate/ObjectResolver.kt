@@ -14,7 +14,6 @@ class ObjectResolver {
         }
     }
 
-
     internal fun merge(objectResolver: ObjectResolver): ObjectResolver {
         customObjectResolverMap.putAll(objectResolver.customObjectResolverMap)
         return this
