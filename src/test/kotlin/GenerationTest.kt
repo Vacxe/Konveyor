@@ -1,15 +1,15 @@
 import konveyor.base.randomBuild
-import objects.ImmutableCollectionDataClass
-import objects.MutableCollectionDataClass
-import objects.NestedDataClass
-import objects.PrimitiveDataClass
+import konveyor.generate.CustomParameters
+import konveyor.generate.ObjectResolver
+import objects.*
 import org.junit.Test
 
 class GenerationTest {
 
     @Test
-    fun primiviteGenerationTest(){
-       val primitiveDataClass: PrimitiveDataClass = randomBuild()
+    fun primiviteGenerationTest() {
+        val primitiveDataClass: PrimitiveDataClass = randomBuild()
+        System.out.print(primitiveDataClass)
 
         assert(primitiveDataClass.boolean != null)
         assert(primitiveDataClass.byte != null)
@@ -25,7 +25,7 @@ class GenerationTest {
     }
 
     @Test
-    fun nestedGenerationTest(){
+    fun nestedGenerationTest() {
         val nestedDataClass: NestedDataClass = randomBuild()
 
         assert(nestedDataClass.first != null)
@@ -33,7 +33,7 @@ class GenerationTest {
     }
 
     @Test
-    fun mutableCollectionGenerationTest(){
+    fun mutableCollectionGenerationTest() {
         val mutableCollectionDataClass: MutableCollectionDataClass = randomBuild()
 
         assert(mutableCollectionDataClass.array != null)
@@ -42,11 +42,20 @@ class GenerationTest {
     }
 
     @Test
-    fun immutableCollectionGenerationTest(){
+    fun immutableCollectionGenerationTest() {
         val immutableCollectionDataClass: ImmutableCollectionDataClass = randomBuild()
 
         assert(immutableCollectionDataClass.array != null)
         assert(immutableCollectionDataClass.set != null)
         assert(immutableCollectionDataClass.map != null)
+    }
+
+    @Test
+    fun interfaceGeneration() {
+        val objectResolver = ObjectResolver()
+        objectResolver.addCustomType(MyInterface::class.java, { MyInterfaceImpl() })
+        val customParameters = CustomParameters(customObjectResolver = objectResolver)
+
+        val immutableCollectionDataClass: NestedInterfaceDataClass = randomBuild()
     }
 }

@@ -12,6 +12,9 @@ class Konveyor {
                 objectResolver.addCustomType(clazz, lambda)
     }
 }
+fun <T> randomBuild(clazz: Class<T>): T = randomBuild(clazz = clazz)
+
+fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int): T = randomBuild(clazz = clazz, constructorNumber = constructorNumber)
 
 fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int = 0,
                     customParameters: CustomParameters = CustomParameters()): T =
