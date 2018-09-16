@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3da03e6-c709-4767-86aa-f77ef8544e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-    </list>
+    <list default="true" id="d3da03e6-c709-4767-86aa-f77ef8544e40" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -44,8 +42,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="305">
+              <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -54,8 +52,8 @@
       <file leaf-file-name="GenerationTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/GenerationTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="58" selection-end-column="82" />
+            <state relative-caret-position="275">
+              <caret line="58" column="117" lean-forward="false" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="117" />
               <folding>
                 <element signature="e#0#153#0" expanded="true" />
               </folding>
@@ -66,8 +64,8 @@
       <file leaf-file-name="JavaGeneration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/JavaGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +76,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+            <state relative-caret-position="-135">
+              <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -98,8 +96,8 @@
       <file leaf-file-name="Konveyor.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/base/Konveyor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="92" lean-forward="true" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
+            <state relative-caret-position="215">
+              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -108,28 +106,18 @@
       <file leaf-file-name="ObjectResolver.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/ObjectResolver.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="206">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomParameters.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/CustomParameters.kt">
+      <file leaf-file-name="Generator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/Generator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyInterfaceImpl.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/objects/MyInterfaceImpl.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="765">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -602,15 +590,15 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/objects/ImmutableCollectionDataClass.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/ImmutableCollectionGenerator.kt" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/src/test/kotlin/objects/MyInterface.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/objects/MyInterfaceImpl.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/objects/NestedInterfaceDataClass.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/GenerationTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/base/Konveyor.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/JavaGeneration.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/GenerationTest.kt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/local.properties" />
       </list>
     </option>
   </component>
@@ -691,7 +679,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JavaGeneration.testPrimitiveGenerationWithJava">
+  <component name="RunManager" selected="JUnit.GenerationTest.interfaceGeneration">
     <configuration name="GenerationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Konveyor_test" />
@@ -732,14 +720,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GenerationTest.mutableCollectionGenerationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenerationTest.interfaceGeneration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Konveyor_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GenerationTest" />
-      <option name="METHOD_NAME" value="mutableCollectionGenerationTest" />
+      <option name="METHOD_NAME" value="interfaceGeneration" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -903,17 +891,17 @@
       <item index="0" class="java.lang.String" itemvalue="Gradle.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.GenerationTest.primiviteGenerationTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.GenerationTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.GenerationTest.mutableCollectionGenerationTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GenerationTest.immutableCollectionGenerationTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JavaGeneration.testPrimitiveGenerationWithJava" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GenerationTest.immutableCollectionGenerationTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JavaGeneration.testPrimitiveGenerationWithJava" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.GenerationTest.interfaceGeneration" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JavaGeneration.testPrimitiveGenerationWithJava" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GenerationTest.primiviteGenerationTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GenerationTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GenerationTest.immutableCollectionGenerationTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GenerationTest.mutableCollectionGenerationTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GenerationTest.interfaceGeneration" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GenerationTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JavaGeneration.testPrimitiveGenerationWithJava" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GenerationTest.primiviteGenerationTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GenerationTest.immutableCollectionGenerationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -934,19 +922,13 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GenerationTest - 2018.09.10 at 23h 18m 12s.xml">
-      <configuration name="GenerationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GenerationTest - 2018.09.10 at 23h 20m 00s.xml">
-      <configuration name="GenerationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GenerationTest - 2018.09.10 at 23h 20m 48s.xml">
-      <configuration name="GenerationTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GenerationTest - 2018.09.10 at 23h 22m 12s.xml">
       <configuration name="GenerationTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="GenerationTest - 2018.09.10 at 23h 23m 28s.xml">
+      <configuration name="GenerationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GenerationTest - 2018.09.16 at 22h 44m 08s.xml">
       <configuration name="GenerationTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="GenerationTest_immutableCollectionGenerationTest - 2018.09.10 at 23h 13m 30s.xml">
@@ -958,6 +940,12 @@
     <history-entry file="GenerationTest_immutableCollectionGenerationTest - 2018.09.10 at 23h 18m 04s.xml">
       <configuration name="GenerationTest.immutableCollectionGenerationTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GenerationTest_interfaceGeneration - 2018.09.16 at 22h 47m 18s.xml">
+      <configuration name="GenerationTest.interfaceGeneration" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GenerationTest_interfaceGeneration - 2018.09.16 at 22h 48m 49s.xml">
+      <configuration name="GenerationTest.interfaceGeneration" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="GenerationTest_primiviteGenerationTest - 2018.09.16 at 22h 16m 41s.xml">
       <configuration name="GenerationTest.primiviteGenerationTest" configurationId="JUnit" />
     </history-entry>
@@ -967,7 +955,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -982,13 +969,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315625" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315625" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3876923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38660577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1028,8 +1015,26 @@
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/Generator.kt</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/Generator.kt</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/ObjectResolver.kt</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1191,14 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/Generator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/jre/lib/rt.jar!/java/util/Map.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1225,7 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties" />
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/objects/PrimitiveDataClass.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1242,14 +1238,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/objects/MyInterfaceImpl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/CustomParameters.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1258,7 +1246,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/ObjectResolver.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/objects/MyInterfaceImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
@@ -1266,10 +1254,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/ObjectResolver.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/generate/Generator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/GenerationTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="58" selection-end-column="82" />
+        <state relative-caret-position="275">
+          <caret line="58" column="117" lean-forward="false" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="117" />
           <folding>
             <element signature="e#0#153#0" expanded="true" />
           </folding>
@@ -1286,16 +1290,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/vacxe/konveyor/base/Konveyor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="92" lean-forward="true" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
+        <state relative-caret-position="215">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/JavaGeneration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1304,8 +1308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        <state relative-caret-position="-135">
+          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1320,8 +1324,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        <state relative-caret-position="305">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
           <folding />
         </state>
       </provider>

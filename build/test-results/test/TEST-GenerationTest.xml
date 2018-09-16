@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GenerationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-09-16T15:49:44" hostname="Konstantins-MacBook-Pro.local" time="0.063">
+  <properties/>
+  <testcase name="immutableCollectionGenerationTest" classname="GenerationTest" time="0.044"/>
+  <testcase name="nestedGenerationTest" classname="GenerationTest" time="0.003"/>
+  <testcase name="interfaceGeneration" classname="GenerationTest" time="0.004"/>
+  <testcase name="mutableCollectionGenerationTest" classname="GenerationTest" time="0.007"/>
+  <testcase name="primiviteGenerationTest" classname="GenerationTest" time="0.003"/>
+  <system-out><![CDATA[No possible to create constructor build treeNo possible to create constructor build treeNo possible to create constructor build treenullnullPrimitiveDataClass(int=706874420, double=0.9555940212850947, byte=95, short=16521, long=8137942376048159240, float=0.7908016, boolean=true, char=?, string=String_-1938897857, charSequence=String_28751092)]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

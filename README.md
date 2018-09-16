@@ -47,7 +47,7 @@ val objectResolver = ObjectResolver()
 objectResolver.addCustomType(MyInterface::class.java, { MyInterfaceImpl() })
 val customParameters = CustomParameters(customObjectResolver = objectResolver)
 
-val immutableCollectionDataClass: NestedInterfaceDataClass = randomBuild()
+val immutableCollectionDataClass: NestedInterfaceDataClass = randomBuild(customParameters = customParameters)
 ```
 
 ### Compatibility with Java
