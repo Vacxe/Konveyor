@@ -40,7 +40,7 @@ ext {
     siteUrl = 'https://github.com/vacxe/Konveyor'
     gitUrl = 'https://github.com/vacxe/Konveyor.git'
 
-    libraryVersion = '1.0RC'
+    libraryVersion = '1.0'
 
     developerId = 'vacxe'
     developerName = 'Konstantin Aksenov'
