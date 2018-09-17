@@ -3,6 +3,7 @@ Konveyor is a library for generation Data classes with random values
 
 [![Download](https://api.bintray.com/packages/vacxe2/maven/Konveyor/images/download.svg) ](https://bintray.com/vacxe2/maven/Konveyor/_latestVersion)
 [![codecov](https://codecov.io/gh/vacxe/Konveyor/branch/master/graph/badge.svg)](https://codecov.io/gh/vacxe/Konveyor)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Konveyor-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7140)
 
 ## Genesis
 
