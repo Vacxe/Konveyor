@@ -51,6 +51,13 @@ class GenerationTest {
     }
 
     @Test
+    fun enumGenerationTest() {
+        val enumDataClass: WithEnumDataClass = randomBuild()
+
+        assert(enumDataClass.enum != null)
+    }
+
+    @Test
     fun interfaceGeneration() {
         val objectResolver = ObjectResolver()
         objectResolver.addCustomType(MyInterface::class.java, { MyInterfaceImpl() })
