@@ -2,6 +2,7 @@ package konveyor.generate
 
 import com.github.vacxe.konveyor.generate.EnumGenerator
 import com.github.vacxe.konveyor.generate.ImmutableCollectionGenerator
+import com.github.vacxe.konveyor.generate.InterfaceGenerator
 import konveyor.exceptions.KonveyorException
 import java.lang.reflect.Constructor
 
@@ -11,6 +12,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
     private val randomPrimitiveGenerator = PrimitiveGenerator()
     private val randomCollectionsGenerator = ImmutableCollectionGenerator()
     private val enumGenerator = EnumGenerator()
+    private val interfaceGenerator = InterfaceGenerator()
 
     fun <T> build(clazz: Class<T>, constructorNumber: Int = 0, nestedLevel: Int = 0): T {
         if (nestedLevel > parameters.nesting) {
@@ -49,6 +51,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
                 randomPrimitiveGenerator.isPrimivite(parameterType) -> randomPrimitiveGenerator.generatePrimitive(parameterType)
                 randomCollectionsGenerator.isImmutableCollection(parameterType) -> randomCollectionsGenerator.generateCollection(parameterType)
                 enumGenerator.isEnum(parameterType) -> enumGenerator.generateEnum(parameterType)
+                interfaceGenerator.inInterface(parameterType) -> interfaceGenerator.generateMock(parameterType)
                 else -> generateNestedClass(parameterType, nestedLevel + 1)
             }
 
