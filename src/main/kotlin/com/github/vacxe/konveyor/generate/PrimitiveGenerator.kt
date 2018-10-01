@@ -11,7 +11,7 @@ internal class PrimitiveGenerator {
             Char::class.java, String::class.java, CharSequence::class.java
     )
 
-    fun isPrimivite(parameterType: Class<*>) = primitiveSet.contains(parameterType)
+    fun isPrimitive(parameterType: Class<*>) = primitiveSet.contains(parameterType)
 
     fun generatePrimitive(parameterType: Class<*>): Any = when (parameterType) {
         Byte::class.java -> random.nextInt(Byte.MAX_VALUE.toInt()).toByte()
