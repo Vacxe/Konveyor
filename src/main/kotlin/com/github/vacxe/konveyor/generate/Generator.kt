@@ -48,7 +48,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
 
     private fun getRandomValue(parameterType: Class<*>, nestedLevel: Int): Any =
             when {
-                randomPrimitiveGenerator.isPrimivite(parameterType) -> randomPrimitiveGenerator.generatePrimitive(parameterType)
+                randomPrimitiveGenerator.isPrimitive(parameterType) -> randomPrimitiveGenerator.generatePrimitive(parameterType)
                 randomCollectionsGenerator.isImmutableCollection(parameterType) -> randomCollectionsGenerator.generateCollection(parameterType)
                 enumGenerator.isEnum(parameterType) -> enumGenerator.generateEnum(parameterType)
                 interfaceGenerator.inInterface(parameterType) -> interfaceGenerator.generateMock(parameterType)
