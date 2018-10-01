@@ -12,6 +12,7 @@ class Konveyor {
                 objectResolver.addCustomType(clazz, lambda)
     }
 }
+
 fun <T> randomBuild(clazz: Class<T>): T = randomBuild(clazz = clazz)
 
 fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int): T = randomBuild(clazz = clazz, constructorNumber = constructorNumber)
@@ -20,7 +21,6 @@ fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int = 0,
                     customParameters: CustomParameters = CustomParameters()): T =
         Generator(Konveyor.objectResolver.merge(customParameters.customObjectResolver),
                 customParameters).build(clazz, constructorNumber)
-
 
 inline fun <reified T : Any> randomBuild(constructorNumber: Int = 0, customParameters: CustomParameters = CustomParameters()): T =
         randomBuild(T::class.java, constructorNumber, customParameters)
