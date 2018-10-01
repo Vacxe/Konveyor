@@ -5,3 +5,9 @@
 /.idea
 /.gradle
 local.properties
+
+# Temp files
+.DS_Store
+Thumbs.db
+
+
