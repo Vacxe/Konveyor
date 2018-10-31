@@ -60,7 +60,10 @@ class GenerationTest {
     @Test
     fun interfaceGenerationWithImplimentation() {
         val objectResolver = ObjectResolver()
-        objectResolver.addCustomType(MyInterface::class.java, { MyInterfaceImpl() })
+        objectResolver.addCustomType<MyInterface> {
+            MyInterfaceImpl()
+        }
+
         val customParameters = CustomParameters(customObjectResolver = objectResolver)
 
         val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(customParameters = customParameters)
