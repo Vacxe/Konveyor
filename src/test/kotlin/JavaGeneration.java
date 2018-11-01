@@ -1,4 +1,3 @@
-import konveyor.base.Konveyor;
 import konveyor.base.KonveyorKt;
 import objects.PrimitiveDataClass;
 import org.junit.Test;
