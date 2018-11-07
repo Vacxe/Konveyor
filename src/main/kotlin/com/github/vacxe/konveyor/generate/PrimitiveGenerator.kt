@@ -20,7 +20,7 @@ internal class PrimitiveGenerator {
         Long::class.java -> random.nextLong()
         Float::class.java -> random.nextFloat()
         Double::class.java -> random.nextDouble()
-        Boolean::class.java -> random.nextBoolean()
+        Boolean::class.java -> false
         Char::class.java -> random.nextInt(Byte.MAX_VALUE.toInt()).toChar()
         String::class.java -> "String_${random.nextInt()}"
         CharSequence::class.java -> "String_${random.nextInt()}"
