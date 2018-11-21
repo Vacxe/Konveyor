@@ -20,6 +20,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
         }
 
         val constructors = clazz.constructors
+        constructors.sortBy { it.parameterCount }
         if (constructors.isNotEmpty()) {
             for (constructor in constructors) {
                 try {
@@ -51,7 +52,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
                 randomPrimitiveGenerator.isPrimitive(parameterType) -> randomPrimitiveGenerator.generatePrimitive(parameterType)
                 randomCollectionsGenerator.isImmutableCollection(parameterType) -> randomCollectionsGenerator.generateCollection(parameterType)
                 enumGenerator.isEnum(parameterType) -> enumGenerator.generateEnum(parameterType)
-                interfaceGenerator.inInterface(parameterType) -> interfaceGenerator.generateMock(parameterType)
+                interfaceGenerator.isInterface(parameterType) -> interfaceGenerator.generateMock(parameterType)
                 else -> generateNestedClass(parameterType, nestedLevel + 1)
             }
 

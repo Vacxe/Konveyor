@@ -8,7 +8,7 @@ class Konveyor {
     companion object {
         internal val objectResolver = ObjectResolver()
 
-        fun <T> addCustomType(clazz: Class<T>, lambda: () -> T) =
+        fun <T: Any> addCustomType(clazz: Class<T>, lambda: () -> T) =
                 objectResolver.addCustomType(clazz, lambda)
     }
 }

@@ -1,17 +1,19 @@
 package konveyor.generate
 
 class ObjectResolver {
-    private val customObjectResolverMap = HashMap<Class<*>, (Any)>()
+    private val customObjectResolverMap = HashMap<Class<*>, () -> Any>()
 
-    fun <C> addCustomType(clazz: Class<C>, lambda : () -> C) =
-        customObjectResolverMap.put(clazz, lambda)
+    fun <C: Any> addCustomType(clazz: Class<C>, lambda: () -> C) {
+        customObjectResolverMap[clazz] = lambda
+    }
 
-    internal fun resolve(clazz: Class<*>) : Any?{
-        return if(customObjectResolverMap.containsKey(clazz)) {
-            (customObjectResolverMap[clazz] as? () -> Any)?.invoke()
-        }else{
-            null
-        }
+    inline fun <reified C: Any> addCustomType(noinline lambda : () -> C) {
+        addCustomType(C::class.java, lambda)
+    }
+
+    internal fun resolve(clazz: Class<*>): Any? {
+        val customResolver = customObjectResolverMap[clazz]
+        return customResolver?.invoke()
     }
 
     internal fun merge(objectResolver: ObjectResolver): ObjectResolver {
