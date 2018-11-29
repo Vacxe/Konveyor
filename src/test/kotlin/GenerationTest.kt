@@ -1,12 +1,10 @@
 import konveyor.base.Konveyor
 import konveyor.base.randomBuild
 import konveyor.exceptions.KonveyorException
-import konveyor.generate.CustomParameters
 import konveyor.generate.ObjectResolver
 import objects.*
 import org.junit.Test
 import java.lang.Exception
-import java.util.*
 
 class GenerationTest {
 
@@ -31,17 +29,13 @@ class GenerationTest {
     @Test
     fun nestedGenerationTest() {
         val nestedDataClass: NestedDataClass = randomBuild()
-
         assert(nestedDataClass.first != null)
         assert(nestedDataClass.second != null)
     }
 
     @Test(expected = KonveyorException::class)
     fun nestedGenerationException() {
-        val customParameters = CustomParameters(nesting = 0)
-        val nestedDataClass: NestedDataClass = randomBuild(customParameters = customParameters)
-        assert(nestedDataClass.first != null)
-        assert(nestedDataClass.second != null)
+        val nestedDataClass: LoopNestedDataClass = randomBuild()
     }
 
     @Test
@@ -99,9 +93,7 @@ class GenerationTest {
             MyInterfaceImpl()
         }
 
-        val customParameters = CustomParameters(customObjectResolver = objectResolver)
-
-        val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(customParameters = customParameters)
+        val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(resolver = objectResolver)
     }
 
     @Test
@@ -109,7 +101,6 @@ class GenerationTest {
         val objectResolver = ObjectResolver()
         Konveyor.addCustomType(MyInterfaceImpl::class.java) { MyInterfaceImpl() }
         objectResolver.addCustomType { MyInterfaceImpl() }
-        val customParameters = CustomParameters(customObjectResolver = objectResolver)
-        val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(customParameters = customParameters)
+        val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(resolver = objectResolver)
     }
 }

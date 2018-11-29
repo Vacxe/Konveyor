@@ -45,11 +45,10 @@ PrimitiveDataClass(int=-160837378, double=0.2543439936127936, byte=125, short=75
 Konveyor generates for you every class which has primitives in base. But sometimes, we have to create classes with interfaces and with some irregular cases. We can resolve this issue by using `ObjectResolver`:
 
 ```kotlin
-val objectResolver = ObjectResolver()
-objectResolver.addCustomType(MyInterface::class.java, { MyInterfaceImpl() })
-val customParameters = CustomParameters(customObjectResolver = objectResolver)
+val resolver = ObjectResolver()
+resolver(MyInterface::class.java, { MyInterfaceImpl() })
 
-val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(customParameters = customParameters)
+val nestedInterfaceDataClass: NestedInterfaceDataClass = randomBuild(resolver = resolver)
 ```
 
 ### Compatibility with Java
