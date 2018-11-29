@@ -6,16 +6,16 @@ import com.github.vacxe.konveyor.generate.InterfaceGenerator
 import konveyor.exceptions.KonveyorException
 import java.lang.reflect.Constructor
 
-internal class Generator(private val customObjectResolver: ObjectResolver = ObjectResolver(),
-                         private val parameters: CustomParameters = CustomParameters()) {
+internal class Generator(private val objectResolver: ObjectResolver = ObjectResolver()) {
 
+    private val MAX_NESTING = 100
     private val randomPrimitiveGenerator = PrimitiveGenerator()
     private val randomCollectionsGenerator = ImmutableCollectionGenerator()
     private val enumGenerator = EnumGenerator()
     private val interfaceGenerator = InterfaceGenerator()
 
     fun <T> build(clazz: Class<T>, constructorNumber: Int = 0, nestedLevel: Int = 0): T {
-        if (nestedLevel > parameters.nesting) {
+        if (nestedLevel > MAX_NESTING) {
             throw KonveyorException("Generation level out of possible nesting")
         }
 
@@ -58,7 +58,7 @@ internal class Generator(private val customObjectResolver: ObjectResolver = Obje
 
 
     private fun generateNestedClass(clazz: Class<*>, nestedLevel: Int = 0): Any {
-        customObjectResolver.resolve(clazz)?.let { return it }
+        objectResolver.resolve(clazz)?.let { return it }
         for (constructorNumber in 0..clazz.constructors.size) {
             try {
                 return build(clazz, constructorNumber, nestedLevel = nestedLevel)
