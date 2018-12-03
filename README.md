@@ -37,8 +37,10 @@ val primitiveDataClass: PrimitiveDataClass = randomBuild()
 And all fields are automatically filled up:
 
 ```
-PrimitiveDataClass(int=-160837378, double=0.2543439936127936, byte=125, short=7553, long=8930811805778341874, float=0.9110602, boolean=true, char=2, string=String_212195448, charSequence=String_1391234678)
+PrimitiveDataClass(int=-160837378, double=0.2543439936127936, byte=125, short=7553, long=8930811805778341874, float=0.9110602, boolean=false, char=2, string=String_212195448, charSequence=String_1391234678)
 ```
+
+All booleans will be ```false``` by default
 
 ### Special cases
 
