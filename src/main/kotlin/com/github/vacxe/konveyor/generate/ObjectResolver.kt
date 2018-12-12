@@ -17,8 +17,10 @@ class ObjectResolver {
         return customResolver?.invoke()
     }
 
-    internal fun merge(objectResolver: ObjectResolver): ObjectResolver {
-        customObjectResolverMap.putAll(objectResolver.customObjectResolverMap)
+    internal fun merge(objectResolver: ObjectResolver?): ObjectResolver {
+        objectResolver?.let{
+            customObjectResolverMap.putAll(it.customObjectResolverMap)
+        }
         return this
     }
 }
