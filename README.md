@@ -42,6 +42,8 @@ PrimitiveDataClass(int=-160837378, double=0.2543439936127936, byte=125, short=75
 
 All ```boolean``` will be ```false``` by default
 
+Also all fields with setter functions should be initialized manualy. Library can help you only with initialization for constructors variables. 
+
 ### Special cases
 
 Konveyor generates for you every class which has primitives in base. But sometimes, we have to create classes with interfaces and with some irregular cases. We can resolve this issue by using `ObjectResolver`:
