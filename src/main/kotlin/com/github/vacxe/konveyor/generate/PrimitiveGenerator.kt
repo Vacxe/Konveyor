@@ -1,14 +1,22 @@
-package konveyor.generate
+package com.github.vacxe.konveyor.generate
 
-import konveyor.exceptions.KonveyorException
+import com.github.vacxe.konveyor.exceptions.KonveyorException
 import java.util.*
 
 internal class PrimitiveGenerator {
     private val random = Random()
 
-    private val primitiveSet = setOf(Byte::class.java, Short::class.java, Int::class.java,
-            Long::class.java, Float::class.java, Double::class.java, Boolean::class.java,
-            Char::class.java, String::class.java, CharSequence::class.java
+    private val primitiveSet = setOf(
+            Byte::class.java,
+            Short::class.java,
+            Int::class.java,
+            Long::class.java,
+            Float::class.java,
+            Double::class.java,
+            Boolean::class.java,
+            Char::class.java,
+            String::class.java,
+            CharSequence::class.java
     )
 
     fun isPrimitive(parameterType: Class<*>) = primitiveSet.contains(parameterType)

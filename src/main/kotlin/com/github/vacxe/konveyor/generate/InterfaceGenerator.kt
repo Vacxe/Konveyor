@@ -1,8 +1,7 @@
 package com.github.vacxe.konveyor.generate
 
-import konveyor.exceptions.KonveyorException
+import com.github.vacxe.konveyor.exceptions.KonveyorException
 import java.lang.reflect.InvocationHandler
-import java.lang.reflect.Method
 import java.lang.reflect.Proxy
 
 class InterfaceGenerator {
@@ -15,7 +14,7 @@ class InterfaceGenerator {
                 if (name == "toString") {
                     return@InvocationHandler "It's a mock interface for ${parameterType.name} class"
                 }
-                throw KonveyorException("no method found")
+                throw KonveyorException("No method found")
             }
     )
 }

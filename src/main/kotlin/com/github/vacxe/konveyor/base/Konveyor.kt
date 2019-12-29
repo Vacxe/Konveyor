@@ -1,24 +1,23 @@
-package konveyor.base
+package com.github.vacxe.konveyor.base
 
-import konveyor.generate.ObjectResolver
-import konveyor.generate.Generator
+import com.github.vacxe.konveyor.generate.Generator
+import com.github.vacxe.konveyor.generate.configuration.Configuration
 
 class Konveyor {
     companion object {
-        internal val GlobalObjectResolver = ObjectResolver()
+        val configuration: Configuration = Configuration()
 
-        fun <T: Any> addCustomType(clazz: Class<T>, lambda: () -> T) =
-                GlobalObjectResolver.addCustomType(clazz, lambda)
+        fun configuration(function: Configuration.() -> Unit){
+            Konveyor.configuration.apply(function)
+        }
     }
 }
-fun <T> randomBuild(clazz: Class<T>): T = randomBuild(clazz, 0)
 
-fun <T> randomBuild(clazz: Class<T>, resolver: ObjectResolver): T = randomBuild(clazz, resolver, 0)
+inline fun <reified T : Any> build(): T {
+    return Generator(Konveyor.configuration).build(T::class.java)
+}
 
-fun <T> randomBuild(clazz: Class<T>, constructorNumber: Int): T = randomBuild(clazz, null, constructorNumber)
+inline fun <reified T : Any> build(noinline configuration: Configuration.() -> Unit): T {
+    return Generator(Konveyor.configuration.apply(configuration)).build(T::class.java)
+}
 
-fun <T> randomBuild(clazz: Class<T>, resolver: ObjectResolver?, constructorNumber: Int): T =
-        Generator(Konveyor.GlobalObjectResolver.merge(resolver)).build(clazz, constructorNumber)
-
-inline fun <reified T : Any> randomBuild(resolver: ObjectResolver? = null, constructorNumber: Int = 0): T =
-        randomBuild(T::class.java, resolver, constructorNumber)

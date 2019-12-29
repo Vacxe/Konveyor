@@ -1,21 +1,18 @@
-package konveyor.generate
+package com.github.vacxe.konveyor.generate
 
-import com.github.vacxe.konveyor.generate.EnumGenerator
-import com.github.vacxe.konveyor.generate.ImmutableCollectionGenerator
-import com.github.vacxe.konveyor.generate.InterfaceGenerator
-import konveyor.exceptions.KonveyorException
+import com.github.vacxe.konveyor.exceptions.KonveyorException
+import com.github.vacxe.konveyor.generate.configuration.Configuration
 import java.lang.reflect.Constructor
 
-internal class Generator(private val objectResolver: ObjectResolver = ObjectResolver()) {
-
-    private val MAX_NESTING = 100
+@Suppress("UNCHECKED_CAST")
+class Generator(private val configuration: Configuration) {
     private val randomPrimitiveGenerator = PrimitiveGenerator()
     private val randomCollectionsGenerator = ImmutableCollectionGenerator()
     private val enumGenerator = EnumGenerator()
     private val interfaceGenerator = InterfaceGenerator()
 
-    fun <T> build(clazz: Class<T>, constructorNumber: Int = 0, nestedLevel: Int = 0): T {
-        if (nestedLevel > MAX_NESTING) {
+    fun <T> build(clazz: Class<T>, nestedLevel: Int = 0): T {
+        if (nestedLevel > configuration.nesting) {
             throw KonveyorException("Generation level out of possible nesting")
         }
 
@@ -24,7 +21,7 @@ internal class Generator(private val objectResolver: ObjectResolver = ObjectReso
         if (constructors.isNotEmpty()) {
             for (constructor in constructors) {
                 try {
-                    val constructor = constructors[constructorNumber]
+                    val constructor = constructors[0]
                     val constructorArguments = initConstructorArguments(constructor, nestedLevel)
                     return constructor.newInstance(*constructorArguments) as T
                 } catch (e: Exception) {
@@ -37,12 +34,17 @@ internal class Generator(private val objectResolver: ObjectResolver = ObjectReso
         }
     }
 
-    private fun initConstructorArguments(constructor: Constructor<*>, nestedLevel: Int): Array<Any> {
-        val constructorArguments = Array<Any>(constructor.parameterCount, { it + 1 })
+    private fun initConstructorArguments(constructor: Constructor<*>,
+                                         nestedLevel: Int): Array<Any> {
+        val constructorArguments = Array<Any>(constructor.parameterCount) { it + 1 }
         val constructorParameters = constructor.parameters
 
         for (index in constructorParameters.indices) {
-            constructorArguments[index] = getRandomValue(constructorParameters[index].type, nestedLevel)
+            val specificValue = configuration.propertyConfigurations.find {
+                constructorParameters[index].type == it.type && constructorParameters[index].name == it.name
+            }?.provider?.invoke()
+
+            constructorArguments[index] = specificValue ?: getRandomValue(constructorParameters[index].type, nestedLevel)
         }
         return constructorArguments
     }
@@ -56,12 +58,18 @@ internal class Generator(private val objectResolver: ObjectResolver = ObjectReso
                 else -> generateNestedClass(parameterType, nestedLevel + 1)
             }
 
-
     private fun generateNestedClass(clazz: Class<*>, nestedLevel: Int = 0): Any {
-        objectResolver.resolve(clazz)?.let { return it }
+        val providedValue =
+                configuration.classConfigurations
+                        .find { it.type == clazz }
+                        ?.provider
+                        ?.invoke()
+        if(providedValue != null) {
+            return providedValue
+        }
         for (constructorNumber in 0..clazz.constructors.size) {
             try {
-                return build(clazz, constructorNumber, nestedLevel = nestedLevel)
+                return build(clazz, nestedLevel)
             } catch (e: KonveyorException) {
             }
         }
