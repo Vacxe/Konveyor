@@ -1,4 +1,4 @@
-name: Deploy Release to Sonatype
+name: Deploy Snapshot to Sonatype
 on:
   workflow_dispatch :
 jobs:
