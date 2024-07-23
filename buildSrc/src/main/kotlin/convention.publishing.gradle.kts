@@ -70,13 +70,14 @@ configure<PublishingExtension> {
 }
 
 val passphrase: String? = System.getenv("GPG_PASSPHRASE")
+val keyId: String? = System.getenv("GPG_KEY_ID")
 
-if (!passphrase.isNullOrBlank()) {
+if (!passphrase.isNullOrBlank() && !keyId.isNullOrBlank()) {
     project.configure<SigningExtension> {
         sign(publishing.publications.getByName("default"))
     }
 
-    project.extra.set("signing.keyId", "0110979F")
+    project.extra.set("signing.keyId", keyId)
     project.extra.set("signing.password", passphrase)
     project.extra.set("signing.secretKeyRingFile", "${project.rootProject.rootDir}/buildsystem/secring.gpg")
 }
