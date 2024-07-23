@@ -32,7 +32,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             artifactId = "konveyor"
-            groupId = "io.github.vacxe"
+            groupId = "io.github.vacxe.konveyor"
 
             from(components["java"])
 
