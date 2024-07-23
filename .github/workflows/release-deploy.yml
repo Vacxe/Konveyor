@@ -1,7 +1,6 @@
 name: Deploy Release to Sonatype
 on:
-  release:
-    types: [ published ]
+  workflow_dispatch :
 jobs:
   deploy:
     runs-on: ubuntu-latest
