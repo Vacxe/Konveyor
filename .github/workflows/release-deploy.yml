@@ -2,7 +2,7 @@ name: Deploy Release to Sonatype
 on:
   workflow_dispatch :
 jobs:
-  deploy:
+  deploy-ossrh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,10 +13,10 @@ jobs:
           java-version: 8
           cache: gradle
       - uses: little-core-labs/get-git-tag@v3.0.2
-      - name: deploy-release
+      - name: Deploy to OSSRH
         run: ./gradlew :publishMavenPublicationToOSSRHRepository -PreleaseMode=RELEASE --stacktrace
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}

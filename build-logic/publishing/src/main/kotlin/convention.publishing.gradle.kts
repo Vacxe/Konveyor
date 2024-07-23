@@ -19,7 +19,8 @@ tasks.withType<ShadowJar>().configureEach {
 val releaseMode: String? by project
 val versionSuffix = when (releaseMode) {
     "RELEASE" -> ""
-    else -> "-SNAPSHOT"
+    "SNAPSHOT" -> "-SNAPSHOT"
+    else -> throw Exception("Unknown release mode")
 }
 
 version = readVersion() + versionSuffix
@@ -32,6 +33,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             artifactId = "konveyor"
+            groupId = "io.github.vacxe"
 
             from(components["java"])
 
@@ -65,7 +67,7 @@ publishing {
                     username = System.getenv("SONATYPE_USERNAME")
                     password = System.getenv("SONATYPE_PASSWORD")
                 }
-                name = "Sonatype"
+                name = "OSSRH"
 
                 setUrl(when (releaseMode) {
                     "RELEASE" -> System.getenv("SONATYPE_RELEASES_URL")
@@ -77,7 +79,7 @@ publishing {
             }
 
             maven {
-                name = "GitHubPackages"
+                name = "Github"
                 setUrl("https://maven.pkg.github.com/vacxe/konveyor")
                 credentials {
                     username = System.getenv("GITHUB_ACTOR")

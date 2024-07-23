@@ -3,8 +3,6 @@ plugins {
     id("convention.publishing")
 }
 
-group = "io.github.vacxe"
-
 repositories {
     mavenCentral()
 }
