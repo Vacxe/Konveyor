@@ -26,7 +26,7 @@ configure<PublishingExtension> {
             }
 
             pom {
-                name.set(project.name)
+                name.set("konveyor")
                 url.set("https://github.com/vacxe/konveyor")
                 description.set("Random data class generator")
 
@@ -36,7 +36,13 @@ configure<PublishingExtension> {
                         url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
                     }
                 }
-
+                developers {
+                    developer {
+                        id.set("vacxe")
+                        name.set("Konstantin Aksenov")
+                        email.set("aksenov.kostya@gmail.com")
+                    }
+                }
                 scm {
                     url.set("https://github.com/KakaoCup/Kakao.git")
                     connection.set("scm:git:ssh://github.com/vacxe/konveyor")
