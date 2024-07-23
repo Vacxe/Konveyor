@@ -1,0 +1,5 @@
+[versions]
+kotlinVersion = "2.0.0"
+
+[libraries]
+org-jetbrains-kotlin-kotlinGradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinVersion" }

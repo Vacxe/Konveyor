@@ -1,4 +1,4 @@
-import konveyor.base.KonveyorKt;
+import io.github.vacxe.konveyor.base.KonveyorKt;
 import objects.PrimitiveDataClass;
 import org.junit.Test;
 

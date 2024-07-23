@@ -1,7 +1,8 @@
-import konveyor.base.Konveyor
-import konveyor.base.randomBuild
-import konveyor.exceptions.KonveyorException
-import konveyor.generate.ObjectResolver
+
+import io.github.vacxe.konveyor.base.Konveyor
+import io.github.vacxe.konveyor.base.randomBuild
+import io.github.vacxe.konveyor.exceptions.KonveyorException
+import io.github.vacxe.konveyor.generate.ObjectResolver
 import objects.*
 import org.junit.Test
 import java.lang.Exception
@@ -23,7 +24,6 @@ class GenerationTest {
         assert(primitiveDataClass.long != null)
         assert(primitiveDataClass.short != null)
         assert(primitiveDataClass.string != null)
-
     }
 
     @Test

@@ -1,0 +1,22 @@
+name: Deploy Release to Sonatype
+on:
+  release:
+    types: [ published ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: 8
+      - uses: little-core-labs/get-git-tag@v3.0.2
+      - name: deploy-release
+        run: ./gradlew :publishDefaultPublicationToOSSHRRepository -PreleaseMode=RELEASE --stacktrace
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}

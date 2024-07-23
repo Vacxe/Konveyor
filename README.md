@@ -1,11 +1,6 @@
 # Konveyor
 Konveyor is a library for generating Data classes with random values.
 
-[![CircleCI](https://circleci.com/gh/Vacxe/Konveyor.svg?style=svg)](https://circleci.com/gh/vacxe/Konveyor)
-[![Download](https://api.bintray.com/packages/vacxe2/maven/Konveyor/images/download.svg) ](https://bintray.com/vacxe2/maven/Konveyor/_latestVersion)
-[![codecov](https://codecov.io/gh/vacxe/Konveyor/branch/master/graph/badge.svg)](https://codecov.io/gh/vacxe/Konveyor)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Konveyor-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7140)
-
 ## Motivation
 
 From time to time, when you implement a test, you need an instance of object. Creating an instance manually takes a lot of time and it might be boring. It's even worse if object contains nested objects. It makes your test a bit littered.
@@ -13,7 +8,7 @@ From time to time, when you implement a test, you need an instance of object. Cr
 
 ## How to use Konveyor
 
-For example you have some class like this
+For example, you have some class like this
 
 ```kotlin
 data class PrimitiveDataClass(val int: Int,
@@ -42,7 +37,7 @@ PrimitiveDataClass(int=-160837378, double=0.2543439936127936, byte=125, short=75
 
 All ```boolean``` will be ```false``` by default
 
-Also all fields with setter functions should be initialized manualy. Library can help you only with initialization for constructors variables. 
+Also, all fields with setter functions should be initialized manualy. Library can help you only with initialization for constructors variables. 
 
 ### Special cases
 
@@ -68,21 +63,22 @@ Maven:
 
 ```xml
 <dependency>
-  <groupId>com.github.vacxe</groupId>
+  <groupId>io.github.vacxe</groupId>
   <artifactId>konveyor</artifactId>
   <version>latest version</version>
   <type>pom</type>
 </dependency>
 ```
-or Gradle:
+Gradle:
 
 ```groovy
-repositories {
-    jcenter()
-}
-
 dependencies {
-    compile 'com.github.vacxe:konveyor:latest version'
+    implementation 'io.github.vacxe:konveyor:<LATEST VERSION>'
+}
+```
+```kotlin
+dependencies {
+    implementation("io.github.vacxe:konveyor:<LATEST VERSION>")
 }
 ```
 
