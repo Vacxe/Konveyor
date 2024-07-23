@@ -13,5 +13,4 @@ dependencyResolutionManagement {
     }
 }
 
-
-rootProject.name = "Konveyor"
+includeBuild("build-logic")
