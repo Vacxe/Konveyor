@@ -1,8 +1,9 @@
-name: Deploy Release to Sonatype
+name: Deploy Release
 on:
   workflow_dispatch :
 jobs:
   deploy-ossrh:
+    name: Deploy to OSSRH
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

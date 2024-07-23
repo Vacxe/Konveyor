@@ -1,10 +1,11 @@
-name: Deploy Snapshot to Sonatype
+name: Deploy Snapshot
 on:
   push:
     branches:
       - master
 jobs:
   deploy-ossrh:
+    name: Deploy to OSSRH
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +16,7 @@ jobs:
           java-version: 8
           cache: gradle
       - uses: little-core-labs/get-git-tag@v3.0.2
-      - name: deploy-release
+      - name: Deploy to OSSRH
         run: ./gradlew :publishMavenPublicationToOSSRHRepository -PreleaseMode=SNAPSHOT --stacktrace
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
@@ -24,6 +25,7 @@ jobs:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
 
   deploy-github:
+    name: Deploy to GitHub
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -34,7 +36,7 @@ jobs:
           java-version: 8
           cache: gradle
       - uses: little-core-labs/get-git-tag@v3.0.2
-      - name: deploy-release
+      - name: Deploy to GitHub
         run: ./gradlew :publishMavenPublicationToGithubRepository -PreleaseMode=SNAPSHOT --stacktrace
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
