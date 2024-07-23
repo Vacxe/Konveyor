@@ -16,7 +16,7 @@ jobs:
           cache: gradle
       - uses: little-core-labs/get-git-tag@v3.0.2
       - name: deploy-release
-        run: ./gradlew :publishMavenPublicationToSonatypeRepository --stacktrace
+        run: ./gradlew :publishMavenPublicationToOSSRHRepository --stacktrace
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}

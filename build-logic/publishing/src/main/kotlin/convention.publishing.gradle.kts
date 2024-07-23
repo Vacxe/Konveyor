@@ -75,6 +75,15 @@ publishing {
                         ?: "https://s01.oss.sonatype.org/content/repositories/snapshots/"
                 })
             }
+
+            maven {
+                name = "GitHubPackages"
+                setUrl("https://maven.pkg.github.com/vacxe/konveyor")
+                credentials {
+                    username = System.getenv("GITHUB_USERNAME")
+                    password = System.getenv("GITHUB_PASSWORD")
+                }
+            }
         }
     }
 }
