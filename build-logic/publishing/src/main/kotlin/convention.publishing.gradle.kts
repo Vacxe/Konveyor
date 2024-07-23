@@ -80,8 +80,8 @@ publishing {
                 name = "GitHubPackages"
                 setUrl("https://maven.pkg.github.com/vacxe/konveyor")
                 credentials {
-                    username = System.getenv("GITHUB_USERNAME")
-                    password = System.getenv("GITHUB_PASSWORD")
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
                 }
             }
         }
